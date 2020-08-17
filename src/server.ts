@@ -1,11 +1,11 @@
-import express from 'express'
+import express from 'express';
 
-import routes from './routes'
+import routes from './routes';
 
-const app = express()
+const app = express();
 
-app.use(routes)
+app.use(routes);
 
 app.listen(3333, () => {
-  console.log('🚀 Server Started on Port 3333')
-})
+  console.log('🚀 Server Started on Port 3333');
+});
