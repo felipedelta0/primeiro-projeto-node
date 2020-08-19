@@ -1,7 +1,12 @@
 import Appointment from '../models/Appointment';
 
+interface Request {
+  provider: string;
+  date: Date;
+}
+
 class CreateAppointmentService {
-  public execute(): Appointment {
+  public execute({ provider, date }: Request): Appointment {
     const appointmentDate = startOfHour(parsedDate);
 
     const findAppointmentInSameDate = appointmentsRepository.findByDate(
